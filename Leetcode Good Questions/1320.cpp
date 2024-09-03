@@ -1,4 +1,6 @@
 //1320. Minimum Distance to Type a Word Using Two Fingers
+//This solution is not acceptable in given time complexity as the question demamds dynamic progression and my approach is using backtracking.. 
+
 class Solution {
 public:
     int getDistance(char word1,char word2){
