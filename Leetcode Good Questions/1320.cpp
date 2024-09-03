@@ -1,3 +1,4 @@
+//1320. Minimum Distance to Type a Word Using Two Fingers
 class Solution {
 public:
     int getDistance(char word1,char word2){
