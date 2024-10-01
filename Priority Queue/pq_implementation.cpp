@@ -60,6 +60,11 @@ class pq{
         if(n == 0) return 1;
         return 0;
     }
+
+    void minele()
+    {
+        cout<<arr[n]<<endl;
+    }
 };
 using namespace std;
 int main()
