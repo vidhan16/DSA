@@ -1,0 +1,21 @@
+Q1. How is JAVA platform independent language
+--> In C/C++ Language the code when compiled gets directly converted to machine code which is architecture specific.
+But in JAVA, a layer of abstraction is added i.e. Byte Code and Byte Code is same for every machine whether it is a MACOSX, Windows, Linux..
+Then this Byte code is further converted to machine specific code with the help of JVM(JAVA Virtual Machine).This byte code file is sharable to any system.
+
+
+Q2. What is JVM?
+--> JAVA Virtual Machine, works as an interpreter that converts byte code to machine understandable code.
+Also responsible for memory management. It engages garbage collector i.e if a part of memory is occupied for a long time and is not in useful further, it automatically cleans it up.
+But this has its downside too, it reduces programming speed as GC (Garbage Collector) occupies resources while cleanup.
+
+Q3. What is JRE?
+--> JAVA Runtime Environment. All required files and libraries are stored inside JRE.
+
+Q4. What is JDK?
+--> JDK is a bundle that comprises of JRE.
+Basically,
+**
+JDK = JRE + Development Tools,
+JRE = JVM + Library
+JVM = Byte Code, Interpreter
