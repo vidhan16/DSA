@@ -1,0 +1,67 @@
+1.Rule 1- red link will only come in left
+2.Rule 2- when red link in right then we have to rotate it to left with method of x taking as red link element and h taking as above then we swap it and exchange colors
+3.Rule 3- when consecutive two red comes in left then we have to do rotate right with same method of x and h and then exchange colors
+4.Rule 4- when x.left and x.right both are red then we have to flip colors of both to black
+
+#while it can be of two types:-
+1.2Node-means it have two links (do bache honge parent ke)
+2.3Node-means it have three links(teen bache honge parent)
+
+Note:-more than this is voilation of this !!
+
+
+-->>To assemble 3 Node the middle one is taken above and below another two are broken into two!!
+
+eg:-    ABC
+       D   E
+
+
+then we have to do==>
+
+	B
+      A   C
+    D       E
+!!this how we make bst red black trees..
+
+
+==>>To rotateRight
+private Node rotateRight(Node h){
+  Node x = h.left;
+  h.left = x.right;
+  x.right=h;
+  x.color=h.color;
+  h.color=RED;
+  return x;
+}
+
+
+==>>to put Node
+
+private Node put(Node h, Key K ,Value V){
+  if(h==null) return new Node(K,V,RED);
+  int cmp =K.compareTo(h.key);
+  if(cmp==0) h.value=V;
+  else if(cmp<0) h.left=put(h.left,K,V);
+  else (cmp>0) h.right=put(h.right,K,V);
+  if(isRed(h.right) && !isRed(h.left)) h=rotateleft(h);
+  if(isRed(h.left) && isRed(h.left.left) h =rotateRight(h);
+  if(isRed(h.left) && isRed(h.right)) h=flipcolors(h);
+  return h;
+}
+
+==>>to rotateleft
+
+private Node rotateLeft(Node h){
+  Node x = right;
+  h.right = left;
+  x.left=h;
+  x.color=h.color;
+  h.color=RED;
+  return x;
+}
+
+
+==>>flip colors
+h.color=RED;
+h.left=Black;
+h.right=Black;
